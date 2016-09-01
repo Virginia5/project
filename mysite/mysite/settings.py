@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ads',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR+'/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -82,7 +83,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'adp_admin',
         'USER': 'root',
-        'PASSWORD': 'wujiayun01',
+        'PASSWORD': 'virginia',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -135,3 +136,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    ("css", BASE_DIR+STATIC_URL+'css'),
+    ("js", BASE_DIR+STATIC_URL+'js'),
+    ("fonts", BASE_DIR+STATIC_URL+'fonts'),
+)

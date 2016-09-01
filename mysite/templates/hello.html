@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block mainbody %}
+<div class = "row">
+    <div class="col-lg-12">
+        <table width="100%">
+            <tr>
+                <td width="20%"><select><option value="0">自助cpc</option><option value="1">内部DSP</option><option value="2">外部DSP</option></select></td><td>用户名</td><td><input class="form-control" name="user" type="text"></td><td>广告内容</td><td><input class="form-control" name="info" type="text"></td><td width="20%"><button class="btn btn-default" onclick="test()">Search</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+function test(){
+alert(1)
+}
+</script>
+{% endblock %}
